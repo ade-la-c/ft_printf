@@ -1,0 +1,30 @@
+parsing de la format str :
+
+
+ft_checker(char) {
+	if : char = c || s || p || d || i || u || x || X
+		return (1)				##amener à fonction respective (ça finit en putchar & putstr)##
+	else if : char = 0
+		return (-1)
+	else
+		return (0)				##ft_putchar(char)##
+}
+
+ft_pick_format(char) {
+	if char = c
+		...
+	if char = s
+		...
+	...
+}
+
+ft_printf(str, ...) {
+	while (on est dans la str) {
+		if (str[i] == %) {
+			if (ft_checker(str[i + 1]) == 1) {
+				ft_pick_format(str[i + 1])
+			}
+		}
+	}
+}
+
