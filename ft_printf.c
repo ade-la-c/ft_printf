@@ -12,31 +12,51 @@
 
 #include "ft_printf.h"
 
-int				ft_checker(char c)
+int						ft_checker(char c)
 {
+	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'u'
+	|| c == 'x' || c == 'X' || c == '%')
+		return (1);
+	else if (!c)
+		return (-1);
 	return (0);
 }
-
-void			ft_pick_format(char c)
+/*
+void					ft_pick_format(char c)
 {
 	if (c == 'c')
 		ft_ischar(c);
 }
-
-int				ft_printf(const char *str, ...)
+*/
+char					*ft_pickdefstr(int i, char *s)
 {
-	va_list		args;
-	int			i;
-	int			
+	int					len;
+	char				*str;
+//	int					start;
+
+	len = 0;
+	while (ft_checker(s[i + len]) != 1)
+		len++;
+	return(ft_strncpy(str, &s[i], (size_t)len)); //ceci est la identifier string, du % au argument type
+}
+
+int main()
+{
+	printf("%s\n", ft_pickdefstr())  //tester si la sous string est correcte
+	return (0);
+}
+
+/*
+int						ft_printf(const char *str, ...)
+{
+	va_list				args;
+	static int			i;			
 
 	i = 0;
 	while (str)
 	{
 		if (str[i] == '%')
-		{
-			if (ft_checker(str[i +1] == 1))
-				ft_pick_format(str[i + 1])
-		}
+			ft_pickdefstr(i, str);
 		else
 			ft_putchar(i);
 		i++;
@@ -44,3 +64,4 @@ int				ft_printf(const char *str, ...)
 
 	return (0);
 }
+*/
