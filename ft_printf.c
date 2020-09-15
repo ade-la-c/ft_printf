@@ -15,53 +15,35 @@
 int						ft_checker(char c)
 {
 	if (c == 'c' || c == 's' || c == 'p' || c == 'd' || c == 'i' || c == 'u'
-	|| c == 'x' || c == 'X' || c == '%')
+	|| c == 'x' || c == 'X')
 		return (1);
-	else if (!c)
-		return (-1);
-	return (0);
-}
-/*
-void					ft_pick_format(char c)
-{
-	if (c == 'c')
-		ft_ischar(c);
-}
-*/
-char					*ft_pickdefstr(int i, char *s)
-{
-	int					len;
-	char				*str;
-//	int					start;
-
-	len = 0;
-	while (ft_checker(s[i + len]) != 1)
-		len++;
-	return(ft_strncpy(str, &s[i], (size_t)len)); //ceci est la identifier string, du % au argument type
-}
-
-int main()
-{
-	printf("%s\n", ft_pickdefstr())  //tester si la sous string est correcte
+	else if (c == '%')
+		return (2);
+//	else if (!c)
+//		return (-1);
 	return (0);
 }
 
-/*
 int						ft_printf(const char *str, ...)
 {
 	va_list				args;
 	static int			i;			
 
 	i = 0;
-	while (str)
+	while (str && str[i])
 	{
 		if (str[i] == '%')
-			ft_pickdefstr(i, str);
+			ft_parser(str, i + 1, args);
 		else
 			ft_putchar(i);
 		i++;
 	}
-
+	return (i);
+}
+/*
+int		main(void)
+{
+	printf("~%d~\n", ft_printf("ello%05d"));
 	return (0);
 }
 */

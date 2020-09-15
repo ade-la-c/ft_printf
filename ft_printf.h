@@ -22,6 +22,17 @@
 # include <limits.h>
 # include <string.h>
 
-int				main(void);
+typedef struct			s_flag
+{
+	int					minus;
+	int					zero;
+	int					width;
+	int					prec;
+	char				identifier;
+}						t_flag;
+
+int						ft_checker(char c);
+char					*ft_pickdefstr(int i, char *s);
+int						main(void);
 
 #endif
