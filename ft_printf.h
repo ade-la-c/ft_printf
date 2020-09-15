@@ -28,7 +28,7 @@ typedef struct			s_flag
 	int					zero;
 	int					width;
 	int					prec;
-	char				identifier;
+	char				definer;
 }						t_flag;
 
 int						ft_checker(char c);
