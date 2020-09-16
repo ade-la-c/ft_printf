@@ -23,7 +23,7 @@ int						ft_checker(char c)
 //		return (-1);
 	return (0);
 }
-
+/*
 int						ft_printf(const char *str, ...)
 {
 	va_list				args;
@@ -40,6 +40,7 @@ int						ft_printf(const char *str, ...)
 	}
 	return (i);
 }
+*/
 /*
 int		main(void)
 {

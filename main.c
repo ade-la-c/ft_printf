@@ -14,7 +14,7 @@
 
 int				main(void)
 {
-	printf("|%-12.5d|\n", 8);
+	printf("|%000000012.5d|\n", 8);
 	printf("|%%|\n");
 	printf("|%-5.5%|\n");
 	printf("%d\n", ft_atoi("235673784$2kjefac"));
