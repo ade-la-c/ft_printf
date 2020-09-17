@@ -31,7 +31,10 @@ typedef struct			s_flag
 	char				definer;
 }						t_flag;
 
+int						ft_printf(const char *str, ...);
 int						ft_checker(char c);
+t_flag					ft_parser(char *s, int i, va_list args);
+int						ft_atoimod(char *str, va_list args);
 char					*ft_pickdefstr(int i, char *s);
 int						main(void);
 
