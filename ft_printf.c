@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:34:30 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/17 21:02:15 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/09/19 13:13:30 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ int						ft_checker(char c)
 int						ft_printf(const char *str, ...)
 {
 	va_list				args;
-	int					i;
+	static int			i;
 
 	i = 0;
 	va_start(args, str);
 	while (str && str[i])
 	{
-		if (str[i] == '%'){printf("^%d^\n", i);
-			ft_parser((char *)str, i + 1, args);}
-		else
+		if (str[i] != '%')
 			ft_putchar(str[i]);
+		else if (str[i] == '%'){printf("^%d^\n", i);
+			ft_parser((char *)str, i, args);}
 		i++;
 	}
 	return (i);

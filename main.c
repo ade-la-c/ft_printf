@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/17 21:04:48 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/09/19 18:08:23 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,20 @@
 
 int				main(void)
 {
-	printf("|%*d|\n", -10, 9);
-	printf("|%-----*d|\n", -10, 9);
-	printf("|%012.5d|\n", 8);
-	printf("|%%|\n");
-	printf("|%-5.5%|\n");
-//	printf("%d\n", ft_atoi("235673784$2kjefac"));
+//	printf("|%-*d|\n", 5, 5);
+//	printf("|%5.5d|\n", 5);
+	printf("|%05.-5d|\n", 5);
+	printf("|%5.*d|\n", -5, 5);
+	printf("|%5.*d|\n", 5, 5);
+	printf("|%05.d|\n", 5);				//flags.prec s'annule quand il n'est pas positif
+	printf("|%05.0d|\n", 5);
+	printf("|%05.*d|\n", 0, 5);
+//	printf("|%*d|\n", 5, 5);
+//	printf("|%-----*d|\n", -10, 9);
+//	printf("|%012.5d|\n", 8);
+//	printf("|%%|\n");
+//	printf("|%-5.5%|\n");
+//	printf("%d\n", ft_atoi("o235"));
 	return (0);
 }
 
