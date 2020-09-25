@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:34:30 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/22 20:58:26 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/09/25 15:39:35 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int						ft_printf(const char *str, ...)
 
 int		main(void)
 {
-	ft_printf("1234567\n%-0*.45deh oh\n", 55, 5);
+	ft_printf("1234567\n%05.*deh oh\n%-0*s\n", -55, 8, "eee");
 	return (0);
 }
