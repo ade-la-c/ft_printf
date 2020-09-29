@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 14:26:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/25 17:31:32 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/09/29 18:43:53 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static int			ft_atoimod(char *str, va_list args, int x, t_flag *f)
 		ret = va_arg(args, int);
 		if (x == 1)
 		{
-			(ret >= 0 ? f->minus : f->minus++);
+			if (ret <= 0)
+				f->minus = 1;
 			return ((ret >= 0) ? ret : -ret);
 		}
 		else if (x == 2)

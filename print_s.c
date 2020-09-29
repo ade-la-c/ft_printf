@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   directions.c                                       :+:      :+:    :+:   */
+/*   print_s.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/25 16:31:37 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/29 18:52:57 by ade-la-c         ###   ########.fr       */
+/*   Created: 2020/09/29 18:53:47 by ade-la-c          #+#    #+#             */
+/*   Updated: 2020/09/29 21:38:19 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void					ft_directions(t_flag *flags, va_list args)
+void				ft_print_s(t_flag flags, va_list args)
 {
-	if (ft_checker(flags->definer) == 0)
-		return ;
-	else if (ft_checker(flags->definer) == 1)
-	{
-		if (flags->definer == 'c' || flags->definer == '%')
-			ft_print_c(*flags, args);
-		if (flags->definer == 's')
-			ft_print_s(*flags, args);
-	}
+	char			*str;
+
+	str = va_arg(args, char*);
+	
+	printf("%s\n", str);
 }
+
+
+/*
+
+la prec. crop la string
+la width agit ensuite
+le flag 0 fait rien
+et le flag négatif agit apres la width comme d'habitude ?
+
+*/

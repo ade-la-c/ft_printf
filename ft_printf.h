@@ -38,10 +38,12 @@ typedef struct			s_flag
 
 int						ft_printf(const char *str, ...);
 int						ft_checker(char c);
-void					ft_process(char *str, t_iteration i, va_list args);
+void					ft_process(char *str, t_iteration *i, va_list args);
 t_flag					ft_parser(char *s, t_iteration *i, va_list args);
+void					ft_directions(t_flag *flags, va_list args);
 
-void					ft_ischar(t_flag flags, va_list args);
+void					ft_print_c(t_flag flags, va_list args);
+void					ft_print_s(t_flag flags, va_list args);
 
 int						main(void);
 

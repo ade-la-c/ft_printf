@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   directions.c                                       :+:      :+:    :+:   */
+/*   print_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/25 16:31:37 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/29 18:52:57 by ade-la-c         ###   ########.fr       */
+/*   Created: 2020/09/10 20:24:00 by ade-la-c          #+#    #+#             */
+/*   Updated: 2020/09/29 18:42:06 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void					ft_directions(t_flag *flags, va_list args)
+void				ft_print_c(t_flag flags, va_list args)
 {
-	if (ft_checker(flags->definer) == 0)
-		return ;
-	else if (ft_checker(flags->definer) == 1)
-	{
-		if (flags->definer == 'c' || flags->definer == '%')
-			ft_print_c(*flags, args);
-		if (flags->definer == 's')
-			ft_print_s(*flags, args);
-	}
+	char			c;
+
+	c = (flags.definer == '%' ? '%' : (char)va_arg(args, int));
+	if (flags.minus == 1)
+		ft_putchar(c);
+	while (flags.width - 1 && flags.width--)
+		ft_putchar(' ');
+	if (flags.minus == 0)
+		ft_putchar(c);
+	return ;
 }
