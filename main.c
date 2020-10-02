@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/29 21:35:16 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/02 16:20:33 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,34 @@ int				main(void)
 //	printf("|%5.5c|\n", 'E');
 //	printf("|%-5.5c|\n", 'E');
 //	printf("|%05.5c|\n", 'E');
-
+//	printf("|%c|\n", -1);
+//	ft_printf("|%c|\n", -1);
+/*
 	printf("|%5s|\n", "oui");
 	printf("|%-5.0s|\n", "oui");
 	printf("|%2.5s|\n", "oui");
-	printf("|%-5s|\n", "oui");
-	printf("|%5s|\n", "oui");
+	printf("|%-5s|\n", "oui");					//string tests
+	printf("|%5.s|\n", "oui");
 	printf("|%5.5s|\n", "oui");
+*/
+
+	ft_printf("|%.2s|\n", "hello");
+	printf("|%.2s|\n", "hello");
+	ft_printf("|%10.2s|\n", "hello");
+	printf("|%10.2s|\n", "hello");
+	ft_printf("|%10s|\n", "hello");
+	printf("|%10s|\n", "hello");
+	ft_printf("|%-10s|\n", "hello");
+	printf("|%-10s|\n", "hello");
+	ft_printf("|%s|\n", "");
+	printf("|%s|\n", "");
+	ft_printf("|%5s|\n", "hellooo");
+	printf("|%5s|\n", "hellooo");
+	ft_printf("|%s|\n", NULL);
+	printf("|%s|\n", NULL);
+//	ft_printf("|%.8s|\n", "hello");
+//	ft_printf("|%*.4s|\n", 0, "hello");
+//	ft_printf("|%s|\n", "hello");
 	return (0);
 }
 
