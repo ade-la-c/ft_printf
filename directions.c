@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 16:31:37 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/09/29 18:52:57 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/05 17:53:50 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ void					ft_directions(t_flag *flags, va_list args)
 			ft_print_c(*flags, args);
 		if (flags->definer == 's')
 			ft_print_s(*flags, args);
+//		if (flags->definer == 'i' || flags->definer == 'd')
+//			ft_print_id(*flags, args);
 	}
 }

@@ -44,6 +44,8 @@ void					ft_directions(t_flag *flags, va_list args);
 
 void					ft_print_c(t_flag flags, va_list args);
 void					ft_print_s(t_flag flags, va_list args);
+void					ft_print_id(t_flag flags, va_list args);
+int						ft_putint(int n);
 
 int						main(void);
 
