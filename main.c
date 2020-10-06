@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/05 20:08:21 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/06 18:26:18 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int				main(void)
 //	ft_printf("|%5s|\n", "hellooo");
 //	printf("|%5s|\n", "hellooo");
 //	ft_printf("|%s|\n", NULL);
-	printf("|%.*s|\n", -3, NULL);			//je segfault pour aucune raison
-	ft_printf("|%.*s|\n", -3, NULL);
+	printf("|%.*s|\n", -1, "hello");			//je segfault pour aucune raison
+	ft_printf("|%.*s|\n", -1, "hello");
 //	ft_printf("|%.8s|\n", "hello");
 //	ft_printf("|%*.4s|\n", 0, "hello");
 //	ft_printf("|%s|\n", "hello");

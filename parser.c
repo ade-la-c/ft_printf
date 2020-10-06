@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 14:26:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/05 20:06:18 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/06 18:41:09 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,11 @@ t_flag				ft_parser(char *s, t_iteration *i, va_list args)
 		f.zero = 1;
 	while (s[i->i] && ft_checker(s[i->i]) == 0)
 	{
-		if ((s[i->i] == '*' || (s[i->i] > '0' && s[i->i] <= '9'))
-		&& f.width == 0 && f.prec == -1)
+		if (((s[i->i] == '*' && s[i->i - 1] != '.') ||
+		(s[i->i] > '0' && s[i->i] <= '9')) && f.width == 0 && f.prec == -1)
 			f.width = ft_atoimod(&s[i->i], args, 1, &f);
 		if (s[i->i] && s[i->i] == '.')
 			f.prec = ft_atoimod(&s[i->i + 1], args, 2, &f);
-		f.prec = (f.prec < -1 ? -1 : f.prec);
 		i->i++;
 	}
 	if (s[i->i] && ft_checker(s[i->i]) != 0)
