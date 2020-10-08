@@ -28,3 +28,23 @@ ft_printf(str, ...) {
 	}
 }
 
+////////////
+
+print id
+
+print_nbr : if (nbr < 0) => print '-' => nbr *= -1
+			if (prec. > nbr) => print '0' *(prec. - nbr) => print nbr
+			else if (prec. < nbr) => print nbr
+
+if zero. && width. && !prec. => prec. = width - 1
+if (prec.) => zero. = 0
+	if (!width.) => print_nbr
+	else if (width)
+		if neg. => print_nbr 
+		print ' ' *(width. - len->nbr-de-print_nbr)
+		if !neg. => print_nbr
+else if !zero && width
+	if neg. => print_nbr 
+	print ' ' *(width. - len->nbr)
+	if !neg. => print_nbr
+

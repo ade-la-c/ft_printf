@@ -6,14 +6,14 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 18:53:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/06 18:39:31 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/07 18:45:11 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-void				ft_print_s(t_flag flags, va_list args)
+void				ft_print_s(t_flag f, va_list args)
 {
 	char			*str;
 	int				i;
@@ -22,17 +22,17 @@ void				ft_print_s(t_flag flags, va_list args)
 	str = va_arg(args, char*);
 	str = (str == NULL ? "(null)" : str);
 	i = 0;
-	prt = ((int)ft_strlen(str) <= flags.prec || flags.prec == -1 ?
-	(int)ft_strlen(str) : flags.prec);
-	if (flags.minus == 1)
+	prt = ((int)ft_strlen(str) <= f.prec || f.prec == -1 ?
+	(int)ft_strlen(str) : f.prec);
+	if (f.minus == 1)
 		while (str[i] && prt && prt--)
 			ft_putchar(str[i++]);
-	prt = ((int)ft_strlen(str) <= flags.prec || flags.prec == -1 ?
-	(int)ft_strlen(str) : flags.prec);
-	while (flags.width && flags.width > prt && flags.width - prt
-	&& flags.width--)
+	prt = ((int)ft_strlen(str) <= f.prec || f.prec == -1 ?
+	(int)ft_strlen(str) : f.prec);
+	while (f.width && f.width > prt && f.width - prt
+	&& f.width--)
 		ft_putchar(' ');
-	if (flags.minus == 0)
+	if (f.minus == 0)
 		while (str[i] && prt && prt--)
 			ft_putchar(str[i++]);
 	return ;

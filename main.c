@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/06 18:26:18 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/08 18:11:27 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,19 +74,32 @@ int				main(void)
 //	ft_printf("|%5s|\n", "hellooo");
 //	printf("|%5s|\n", "hellooo");
 //	ft_printf("|%s|\n", NULL);
-	printf("|%.*s|\n", -1, "hello");			//je segfault pour aucune raison
-	ft_printf("|%.*s|\n", -1, "hello");
+//	printf("|%.*s|\n", -1, "hello");
+//	ft_printf("|%.*s|\n", -1, "hello");
 //	ft_printf("|%.8s|\n", "hello");
 //	ft_printf("|%*.4s|\n", 0, "hello");
 //	ft_printf("|%s|\n", "hello");
 
-//	printf("|%3.5d|\n", 555);
-//	printf("|%05d|\n", 555);
+//	printf("|%.6d|\n", -555);
+//	printf("|%07d|\n", -555);
+//	printf("|%06d|\n", -555);
+//	printf("|%d|\n", 555);						//integer tests
 //	printf("|%d|\n", 555);
-//	printf("|%d|\n", 555);
-//	printf("|%d|\n", 555);
-//	ft_printf("|%d|\n", 88);
+//	printf("|%.0d|\n", 0);
+//	ft_printf("|%.0d|\n", 0);
+//	printf("|%.5d|\n", -555);
+//	ft_printf("|%.5d|\n", -555);
 	//system("leaks a.out");
+
+/*
+	t_flag	f;
+	int		nbr = 0;
+	initflags(&f);
+	f.prec = 1;
+
+	printf("\n~%d~\n", printnbr(f, nbr, 1));
+	printf("%.*d <=correct answer\n", f.prec, nbr);
+*/
 	return (0);
 }
 
