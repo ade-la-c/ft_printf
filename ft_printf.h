@@ -41,12 +41,17 @@ int						ft_checker(char c);
 void					ft_process(char *str, t_iteration *i, va_list args);
 t_flag					ft_parser(char *s, t_iteration *i, va_list args);
 void					ft_directions(t_flag *flags, va_list args);
-int						printnbr(t_flag f, int num, int tag);
 
 void					ft_print_c(t_flag f, va_list args);
 void					ft_print_s(t_flag f, va_list args);
 void					ft_print_id(t_flag f, va_list args);
-int						ft_intlen(int n);
+void					ft_print_u(t_flag f, va_list args);
+void					ft_print_p(t_flag f, va_list args);
+
+int						ft_intlen(long n);
+int						ft_hexlen(unsigned long n);
+void					ft_putnbrbase(unsigned long n, char *base, int len,
+						t_flag f);
 
 int						main(void);
 

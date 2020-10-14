@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_id.c                                         :+:      :+:    :+:   */
+/*   print_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 16:41:33 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/08 18:20:20 by ade-la-c         ###   ########.fr       */
+/*   Created: 2020/10/08 19:00:41 by ade-la-c          #+#    #+#             */
+/*   Updated: 2020/10/09 14:42:33 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int				printnbr(t_flag f, int num, int tag)
+static long				printnbr(t_flag f, long num, int tag)
 {
-	int					i;
+	long					i;
 
 	i = 0;
 	if (!f.prec && num == 0)
@@ -30,11 +30,11 @@ static int				printnbr(t_flag f, int num, int tag)
 	return (i + ft_intlen(num));
 }
 
-void					ft_print_id(t_flag f, va_list args)
+void					ft_print_u(t_flag f, va_list args)
 {
-	int					num;
+	long					num;
 
-	num = va_arg(args, int);
+	num = va_arg(args, long);
 	if (f.zero && f.width && f.prec == -1)
 	{
 		f.prec = (num < 0 ? f.width - 1 : f.width);

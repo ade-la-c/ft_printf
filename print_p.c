@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_c.c                                          :+:      :+:    :+:   */
+/*   print_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/10 20:24:00 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/14 18:12:51 by ade-la-c         ###   ########.fr       */
+/*   Created: 2020/10/09 15:15:36 by ade-la-c          #+#    #+#             */
+/*   Updated: 2020/10/14 18:16:52 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void				ft_print_c(t_flag f, va_list args)
+void					ft_print_p(t_flag f, va_list args)
 {
-	char			c;
+	unsigned long		ptr;
 
-	c = (f.definer == '%' ? '%' : (char)va_arg(args, int));
+	ptr = (unsigned long)va_arg(args, void*);
 	if (f.minus == 1)
-		ft_putchar(c);
-	while (f.width - 1 && f.width--)
-		ft_putchar((c == '%' && f.zero ? '0' : ' '));
+	{
+		ft_putstr("0x");
+		ft_putnbrbase(ptr, "0123456789abcdef", ft_hexlen(ptr), f);
+	}
+	while (f.width && f.width - (ft_hexlen(ptr) + 2) > 0 && f.width--)
+		ft_putchar(' ');
 	if (f.minus == 0)
-		ft_putchar(c);
+	{
+		ft_putstr("0x");
+		ft_putnbrbase(ptr, "0123456789abcdef", ft_hexlen(ptr), f);
+	}
 	return ;
 }

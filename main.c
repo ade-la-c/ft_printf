@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/08 18:11:27 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/14 18:03:07 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,20 @@ int				main(void)
 //	ft_printf("|%.0d|\n", 0);
 //	printf("|%.5d|\n", -555);
 //	ft_printf("|%.5d|\n", -555);
+
+//	printf("|%u|\n", 429496725u);
+//	ft_printf("|%u|\n", 4294967295u);			//unsigned tests
+
+//	printf("|%12p|\n", (void*)"12345");
+//	printf("|%10p|\n", (void*)"12345");
+//	printf("|%-12p|\n", (void*)"12345");
+	printf("|%p|\n", (void*)-899);
+	ft_printf("|%05%|\n");
+//	printf("|%11p|\n", (void*)"12345");			//pointer tests
+//	printf("|%12p|\n", (void*)"12345");
+//	printf("|%-12p|\n", (void*)"12345");
+//	printf("|%-*p|\n", -12, (void*)"12345");
+//	ft_printf("|%p|\n", (void*)"12345");
 	//system("leaks a.out");
 
 /*
