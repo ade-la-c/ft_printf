@@ -47,6 +47,7 @@ void					ft_print_s(t_flag f, va_list args);
 void					ft_print_id(t_flag f, va_list args);
 void					ft_print_u(t_flag f, va_list args);
 void					ft_print_p(t_flag f, va_list args);
+void					ft_print_x(t_flag f, va_list args);
 
 int						ft_intlen(long n);
 int						ft_hexlen(unsigned long n);

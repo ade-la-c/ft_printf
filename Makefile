@@ -6,7 +6,7 @@
 #    By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/17 10:33:51 by ade-la-c          #+#    #+#              #
-#    Updated: 2020/10/13 17:58:46 by ade-la-c         ###   ########.fr        #
+#    Updated: 2020/10/15 15:35:34 by ade-la-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS		= ft_printf.c \
 			print_id.c \
 			print_u.c \
 			print_p.c \
+			print_x.c \
 			utils.c \
 
 OBJS		= $(SRCS:.c=.o)

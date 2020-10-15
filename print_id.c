@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 16:41:33 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/08 18:20:20 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/15 18:06:07 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int				printnbr(t_flag f, int num, int tag)
 	int					i;
 
 	i = 0;
-	if (!f.prec && num == 0)
+	if (!f.prec && !num)
 		return (0);
 	if (num < 0 && ++i && tag == 1)
 		ft_putchar('-');
@@ -39,8 +39,9 @@ void					ft_print_id(t_flag f, va_list args)
 	{
 		f.prec = (num < 0 ? f.width - 1 : f.width);
 		f.width = 0;
+		f.zero = (f.prec ? 0 : f.zero);
 	}
-	f.zero = (f.prec ? 0 : f.zero);
+	
 	if (f.minus == 1)
 		printnbr(f, num, 1);
 	while (f.width && f.width > printnbr(f, num, 2) && f.width--)
