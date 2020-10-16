@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/15 18:39:41 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 15:06:52 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,8 +120,12 @@ int				main(void)
 	printf("|%-5.3x|\n", 17);
 	ft_printf("|%05.3x|\n", 17);
 	printf("|%05.3x|\n", 17);
-	printf("|%010.3x|\n", 17);
-	printf("|%010.3x|\n", 17);
+	ft_printf("|%8.3x|\n", 8375);
+	printf("|%8.3x|\n", 8375);
+	ft_printf("|%-8.0x|\n", 8375);
+	printf("|%-8.0x|\n", 8375);
+	ft_printf("|%5.x|\n", 0);
+	printf("|%5.x|\n", 0);
 
 /*
 	Je dois coder %x, %X afin d'y mettre %p dedans, même si %p est deja pret

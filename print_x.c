@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 15:03:21 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/15 18:49:01 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 15:55:50 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void						ft_print_x(t_flag f, va_list args)
 {
 	unsigned long			num;
 	char					*base;
+	int						prt;
 
 	num = va_arg(args, unsigned long);
 	base = (f.definer == 'X' ? "0123456789ABCDEF" : "0123456789abcdef");
@@ -35,9 +36,12 @@ void						ft_print_x(t_flag f, va_list args)
 		f.width = 0;
 		f.zero = (f.prec ? 0 : f.zero);
 	}
+	prt = (f.prec <= ft_hexlen(num) ? 0 : f.prec - ft_hexlen(num));
 	if (f.minus == 1)
 		printhex(f, num, base);
-	while (f.width && f.width > ft_hexlen(num) && f.width--)
+	if (f.width && !num && !f.prec)
+		ft_putchar(' ');
+	while (f.width && f.width > (ft_hexlen(num) + prt) && f.width--)
 		ft_putchar(' ');
 	if (f.minus == 0)
 		printhex(f, num, base);
@@ -45,7 +49,7 @@ void						ft_print_x(t_flag f, va_list args)
 }
 
 /*
-	%x reste encore a fix : quelque chose mess avec la width, see results.txt
-	introduire %p dans %x une fois %x fix (optionnel)
-	%u reste toujours a fix
+**	%x a été fix, mais hardcodé ligne 42 43
+**	introduire %p dans %x une fois %x fix (optionnel)
+**	%u reste toujours a fix
 */
