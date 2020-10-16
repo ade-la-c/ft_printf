@@ -6,13 +6,13 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 20:00:21 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/13 18:49:03 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 16:30:11 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		nbr_rec_fd(int n, int fd)
+static void		nbr_rec_fd(long n, int fd)
 {
 	char m;
 
@@ -26,7 +26,7 @@ static void		nbr_rec_fd(int n, int fd)
 	write(fd, &m, 1);
 }
 
-void			ft_putnbr_fd(int nb, int fd)
+void			ft_putnbr_fd(long nb, int fd)
 {
 	if (fd < 0)
 		return ;

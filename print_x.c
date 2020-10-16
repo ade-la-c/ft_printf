@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 15:03:21 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/16 15:55:50 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 18:39:55 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,3 @@ void						ft_print_x(t_flag f, va_list args)
 		printhex(f, num, base);
 	return ;
 }
-
-/*
-**	%x a été fix, mais hardcodé ligne 42 43
-**	introduire %p dans %x une fois %x fix (optionnel)
-**	%u reste toujours a fix
-*/

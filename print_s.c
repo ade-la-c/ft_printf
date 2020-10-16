@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 18:53:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/07 18:45:11 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 18:12:17 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void				ft_print_s(t_flag f, va_list args)
 	str = va_arg(args, char*);
 	str = (str == NULL ? "(null)" : str);
 	i = 0;
+	f.prec = (f.prec <= -1 ? -1 : f.prec);
 	prt = ((int)ft_strlen(str) <= f.prec || f.prec == -1 ?
 	(int)ft_strlen(str) : f.prec);
 	if (f.minus == 1)

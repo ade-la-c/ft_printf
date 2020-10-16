@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/16 15:06:52 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 18:38:08 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ int				main(void)
 //	ft_printf("|%.2s|\n", "hello");
 //	printf("|%.2s|\n", "hello");
 //	ft_printf("|%10.2s|\n", "hello");
-//	printf("|%10.2s|\n", "hello");
-//	ft_printf("|%10s|\n", "hello");
+//	printf("|%3.*s|\n", -8, "hello");
+//	ft_printf("|%3.*s|\n", -8, "hello");
 //	printf("|%10s|\n", "hello");				//string tests
 //	ft_printf("|%-10s|\n", "hello");
 //	printf("|%-10s|\n", "hello");
@@ -88,9 +88,9 @@ int				main(void)
 //	printf("|%.0d|\n", 0);
 //	ft_printf("|%.0d|\n", 0);
 //	printf("|%.5d|\n", -555);
-//	ft_printf("|%.5d|\n", -555);
+//	ft_printf("|%.i|\n" -5);
 
-//	printf("|%u|\n", 429496725u);
+//	printf("|%u|\n", 4294967295u);
 //	ft_printf("|%u|\n", 4294967295u);			//unsigned tests
 
 //	printf("|%12p|\n", (void*)"12345");
@@ -104,28 +104,30 @@ int				main(void)
 //	printf("|%-*p|\n", -12, (void*)"12345");
 //	ft_printf("|%p|\n", (void*)"12345");
 
-	ft_printf("|%X|\n", 17);
-	printf("|%X|\n", 17);
-	ft_printf("|%05x|\n", 17);
-	printf("|%05x|\n", 17);
-	ft_printf("|%-10x|\n", 17);
-	printf("|%-10x|\n", 17);
-	ft_printf("|%.3x|\n", 17);						//hex tests
-	printf("|%.3x|\n", 17);						//hex tests
-	ft_printf("|%03x|\n", 17);
-	printf("|%03x|\n", 17);
-	ft_printf("|%5.3x|\n", 17);
-	printf("|%5.3x|\n", 17);
-	ft_printf("|%-5.3x|\n", 17);
-	printf("|%-5.3x|\n", 17);
-	ft_printf("|%05.3x|\n", 17);
-	printf("|%05.3x|\n", 17);
-	ft_printf("|%8.3x|\n", 8375);
-	printf("|%8.3x|\n", 8375);
-	ft_printf("|%-8.0x|\n", 8375);
-	printf("|%-8.0x|\n", 8375);
-	ft_printf("|%5.x|\n", 0);
-	printf("|%5.x|\n", 0);
+//	ft_printf("|%X|\n", 17);
+//	printf("|%X|\n", 17);
+//	ft_printf("|%05x|\n", 17);
+//	printf("|%05x|\n", 17);
+//	ft_printf("|%-10x|\n", 17);
+//	printf("|%-10x|\n", 17);
+//	ft_printf("|%.3x|\n", 17);
+//	printf("|%.3x|\n", 17);						//hex tests
+//	ft_printf("|%03x|\n", 17);
+//	printf("|%03x|\n", 17);
+//	ft_printf("|%5.3x|\n", 17);
+//	printf("|%5.3x|\n", 17);
+//	ft_printf("|%-5.3x|\n", 17);
+//	printf("|%-5.3x|\n", 17);
+//	ft_printf("|%05.3x|\n", 17);
+//	printf("|%05.3x|\n", 17);
+//	ft_printf("|%8.3x|\n", 8375);
+//	printf("|%8.3x|\n", 8375);
+//	ft_printf("|%-8.0x|\n", 8375);
+//	printf("|%-8.0x|\n", 8375);
+//	ft_printf("|%5.x|\n", 0);
+//	printf("|%5.x|\n", 0);
+	printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
+	ft_printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
 
 /*
 	Je dois coder %x, %X afin d'y mettre %p dedans, même si %p est deja pret

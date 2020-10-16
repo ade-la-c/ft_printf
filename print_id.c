@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 16:41:33 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/15 18:06:07 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/16 18:40:45 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void					ft_print_id(t_flag f, va_list args)
 		f.width = 0;
 		f.zero = (f.prec ? 0 : f.zero);
 	}
-	
 	if (f.minus == 1)
 		printnbr(f, num, 1);
 	while (f.width && f.width > printnbr(f, num, 2) && f.width--)
