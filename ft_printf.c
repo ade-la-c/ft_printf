@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:34:30 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/06 17:59:51 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/19 18:48:36 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,50 @@ int						ft_checker(char c)
 	return (0);
 }
 
-void					ft_process(char *str, t_iteration *i, va_list args)
+int						ft_intlen(long n)
+{
+	char		*str;
+	long		lgt;
+
+	if (!n)
+		return (1);
+	str = ft_itoa(n);
+	lgt = (long)ft_strlen(str);
+	free(str);
+	return (lgt);
+}
+
+int						ft_hexlen(unsigned long n)
+{
+	if (n >= 16)
+		return (ft_hexlen(n / 16) + 1);
+	return (1);
+}
+
+void					ft_process(char *str, t_iter *i, va_list args)
 {
 	t_flag				flags;
 
 	flags = ft_parser(str, i, args);
-	ft_directions(&flags, args);
+	ft_directions(&flags, i, args);
 }
 
 int						ft_printf(const char *str, ...)
 {
 	va_list				args;
-	t_iteration			i;
+	t_iter				i;
 
 	i.i = 0;
+	i.print = 0;
 	va_start(args, str);
 	while (str && str[i.i])
 	{
 		if (str[i.i] != '%')
-			ft_putchar(str[i.i]);
+			ft_putcharpf(str[i.i], &i);
 		else if (str[i.i] == '%')
 			ft_process((char *)str, &i, args);
 		i.i++;
 	}
-//	printf("%d\n", i.i);
 	va_end(args);
-	return (i.i);
+	return (i.print);
 }

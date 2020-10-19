@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/16 18:38:08 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/19 18:18:13 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,8 @@ int				main(void)
 //	printf("|%-12p|\n", (void*)"12345");
 //	printf("|%p|\n", (void*)-899);
 //	ft_printf("|%05%|\n");
-//	printf("|%11p|\n", (void*)"12345");			//pointer tests
-//	printf("|%12p|\n", (void*)"12345");
+	printf("|%12p|\n", (void*)"12345");			//pointer tests
+	printf("|%12p|\n", (void*)"12345");
 //	printf("|%-12p|\n", (void*)"12345");
 //	printf("|%-*p|\n", -12, (void*)"12345");
 //	ft_printf("|%p|\n", (void*)"12345");
@@ -126,12 +126,14 @@ int				main(void)
 //	printf("|%-8.0x|\n", 8375);
 //	ft_printf("|%5.x|\n", 0);
 //	printf("|%5.x|\n", 0);
-	printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
-	ft_printf("%% *.5i 42 == |% *.5i|\n", 4, 42);
+
+//printf("~%d~\n", printf("--123456%800d--", 11));
+//printf("~%d~\n", ft_printf("--123456%800d--", 11));
 
 /*
-	Je dois coder %x, %X afin d'y mettre %p dedans, même si %p est deja pret
-	Trouver la solution pour mettre %u dans %d
+	Je dois gérer la valeur de retour de printf
+	Une fois ça de fait, tester code avec d'autres testeurs
+	-> cacharle pft <-
 */
 	//system("leaks a.out");
 

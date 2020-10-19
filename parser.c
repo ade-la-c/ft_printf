@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 14:26:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/06 18:41:09 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/19 16:20:50 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void			initflags(t_flag *flags)
 	flags->definer = 0;
 }
 
-t_flag				ft_parser(char *s, t_iteration *i, va_list args)
+t_flag				ft_parser(char *s, t_iter *i, va_list args)
 {
 	t_flag			f;
 

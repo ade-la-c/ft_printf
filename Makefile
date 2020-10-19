@@ -6,7 +6,7 @@
 #    By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/17 10:33:51 by ade-la-c          #+#    #+#              #
-#    Updated: 2020/10/16 18:56:58 by ade-la-c         ###   ########.fr        #
+#    Updated: 2020/10/19 16:06:17 by ade-la-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ CC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-AR			= @ar rc $(NAME) $(OBJS)
+AR			= libtool -static -o
 
 RM			= rm -f
 
