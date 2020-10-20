@@ -6,7 +6,7 @@
 #    By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/17 10:33:51 by ade-la-c          #+#    #+#              #
-#    Updated: 2020/10/19 16:06:17 by ade-la-c         ###   ########.fr        #
+#    Updated: 2020/10/20 16:54:54 by ade-la-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ CC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
-AR			= libtool -static -o
+AR			= ar rc
 
 RM			= rm -f
 
@@ -46,7 +46,8 @@ OUT_PREFIX	= \033[38;5;220mft_printf\033[38;5;253m : \033[0m
 
 $(NAME):	$(OBJS)
 			@$(MAKE) -C $(LIBDIR)
-			@$(AR) $(NAME) $(LIBDIR)/$(LIB) $(OBJS)
+			@cp $(LIBDIR)/$(LIB) $(NAME)
+			@$(AR) $(NAME) $(OBJS)
 			@ranlib $(NAME)
 			@echo "${OUT_PREFIX}\033[38;5;46mLibrary compiled\033[0m"
 
