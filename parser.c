@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 14:26:47 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/19 16:20:50 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/22 16:20:11 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ t_flag				ft_parser(char *s, t_iter *i, va_list args)
 			f.prec = ft_atoimod(&s[i->i + 1], args, 2, &f);
 		i->i++;
 	}
+	f.zero = (f.minus ? 0 : f.zero);
 	if (s[i->i] && ft_checker(s[i->i]) != 0)
 		f.definer = s[i->i];
 	return (f);

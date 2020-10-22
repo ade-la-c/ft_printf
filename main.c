@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/20 20:46:47 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/22 17:26:39 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ int				main(void)
 
 //	printf("|%u|\n", 4294967295u);
 //	ft_printf("|%u|\n", 4294967295u);			//unsigned tests
-	printf("|%20u|\n", -500);
-	ft_printf("|%20u|\n", -500);
+//	printf("|%20u|\n", -500);
+//	ft_printf("|%20u|\n", -500);
 //	printf("|%20u|\n", -100);
 //	ft_printf("|%20u|\n", -100);
 
@@ -135,6 +135,11 @@ int				main(void)
 //	printf("~%d~\n", printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
 //	printf("~%d~\n", ft_printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
 
+//	ft_printf("|%p|\n", (void*)0x1900);
+//	printf("|%0*d|\n", -5, 10);					//fixing
+	printf("|%10.p|\n", NULL);
+	printf("|%-10.p|\n", NULL);
+	printf("|%.p|\n", NULL);
 /*
 	Je dois gérer la valeur de retour de printf
 	Une fois ça de fait, tester code avec d'autres testeurs
@@ -147,7 +152,6 @@ int				main(void)
 	int		nbr = 0;
 	initflags(&f);
 	f.prec = 1;
-
 	printf("\n~%d~\n", printnbr(f, nbr, 1));
 	printf("%.*d <=correct answer\n", f.prec, nbr);
 */
@@ -160,9 +164,7 @@ int				main(void)
 	char *s = "coucou";
 	int parser;
 	t_flag	flag;
-
 	flag.width = 0;
-
 	printf("%*s", 50, s);
 	printf("\n");
 	return (0);
