@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/22 17:26:39 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/22 17:37:47 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,13 +137,15 @@ int				main(void)
 
 //	ft_printf("|%p|\n", (void*)0x1900);
 //	printf("|%0*d|\n", -5, 10);					//fixing
-	printf("|%10.p|\n", NULL);
-	printf("|%-10.p|\n", NULL);
-	printf("|%.p|\n", NULL);
+//	printf("|%10.p|\n", NULL);
+//	printf("|%-10.p|\n", NULL);
+//	printf("|%.p|\n", NULL);
+	ft_printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
+	printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
 /*
-	Je dois gérer la valeur de retour de printf
-	Une fois ça de fait, tester code avec d'autres testeurs
 	-> cacharle pft <-
+	%u reste a fix, un '0' de trop est print, c'est donc une valeur simple a tweak
+	reste a savoir la quelle et sous quelles conditions
 */
 	//system("leaks a.out");
 
