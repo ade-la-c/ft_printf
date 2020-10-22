@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/20 17:33:12 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/20 20:46:47 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int				main(void)
 //	ft_printf("|%.*s|\n", -1, "hello");
 //	ft_printf("|%.8s|\n", "hello");
 //	ft_printf("|%*.4s|\n", 0, "hello");
-	ft_printf("|%s|\n", "hello");
+//	ft_printf("|%s|\n", "hello");
 
 //	printf("|%.6d|\n", -555);
 //	printf("|%07d|\n", -555);
@@ -91,15 +91,20 @@ int				main(void)
 //	ft_printf("|%.i|\n" -5);
 
 //	printf("|%u|\n", 4294967295u);
-	ft_printf("|%u|\n", 4294967295u);			//unsigned tests
+//	ft_printf("|%u|\n", 4294967295u);			//unsigned tests
+	printf("|%20u|\n", -500);
+	ft_printf("|%20u|\n", -500);
+//	printf("|%20u|\n", -100);
+//	ft_printf("|%20u|\n", -100);
+
 
 //	printf("|%12p|\n", (void*)"12345");
 //	printf("|%10p|\n", (void*)"12345");
 //	printf("|%-12p|\n", (void*)"12345");
 //	printf("|%p|\n", (void*)-899);
 //	ft_printf("|%05%|\n");
-	printf("|%12p|\n", (void*)"12345");			//pointer tests
-	ft_printf("|%12p|\n", (void*)"12345");
+//	printf("|%12p|\n", (void*)"12345");			//pointer tests
+//	ft_printf("|%12p|\n", (void*)"12345");
 //	printf("|%-12p|\n", (void*)"12345");
 //	printf("|%-*p|\n", -12, (void*)"12345");
 //	ft_printf("|%p|\n", (void*)"12345");
@@ -127,8 +132,8 @@ int				main(void)
 //	ft_printf("|%5.x|\n", 0);
 //	printf("|%5.x|\n", 0);
 
-printf("~%d~\n", printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
-printf("~%d~\n", ft_printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
+//	printf("~%d~\n", printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
+//	printf("~%d~\n", ft_printf("--123456%800d %x--%-55.*s", 11, 3465456, 8, "bonjour"));
 
 /*
 	Je dois gérer la valeur de retour de printf

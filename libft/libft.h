@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/06 10:06:51 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/16 16:33:08 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/20 20:36:22 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putnbr_base(int nbr, char *base);
+char				*ft_utoa(unsigned int n);
 
 #endif

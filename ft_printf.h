@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/10 17:37:15 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/19 18:52:40 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/20 20:41:23 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void					ft_print_u(t_flag f, t_iter *i, va_list args);
 void					ft_print_p(t_flag f, t_iter *i, va_list args);
 void					ft_print_x(t_flag f, t_iter *i, va_list args);
 
-int						ft_intlen(long n);
+int						ft_intlen(unsigned int n, t_flag f);
 int						ft_hexlen(unsigned long n);
 void					ft_putcharpf(char c, t_iter *i);
 void					ft_putstrpf(char *s, t_iter *i);

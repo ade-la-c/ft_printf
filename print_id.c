@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 16:41:33 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/19 17:06:09 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/20 20:45:51 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static int				printnbr(t_flag f, int num, int tag, t_iter *iter)
 	if (num < 0 && ++i && tag == 1)
 		ft_putcharpf('-', iter);
 	num = (num < 0 ? num *= -1 : num);
-	while (f.prec > ft_intlen(num) && f.prec-- && ++i)
+	while (f.prec > ft_intlen(num, f) && f.prec-- && ++i)
 		if (tag == 1)
 			ft_putcharpf('0', iter);
 	if (tag == 1)
 		ft_putnbrpf(num, iter);
-	return (i + ft_intlen(num));
+	return (i + ft_intlen(num, f) - (num == INT_MIN ? 1 : 0));
 }
 
 void					ft_print_id(t_flag f, t_iter *i, va_list args)

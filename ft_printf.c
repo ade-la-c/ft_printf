@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:34:30 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/19 18:48:36 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/20 20:39:41 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ int						ft_checker(char c)
 	return (0);
 }
 
-int						ft_intlen(long n)
+int						ft_intlen(unsigned int n, t_flag f)
 {
-	char		*str;
-	long		lgt;
+	char				*str;
+	unsigned int		lgt;
 
 	if (!n)
 		return (1);
-	str = ft_itoa(n);
-	lgt = (long)ft_strlen(str);
+	str = (f.definer == 'u' ? ft_utoa(n) : ft_itoa(n));
+	lgt = (unsigned int)ft_strlen(str);
 	free(str);
 	return (lgt);
 }
