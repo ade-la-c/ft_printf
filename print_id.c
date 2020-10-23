@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 16:41:33 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/22 16:04:23 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/23 16:44:13 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void					ft_print_id(t_flag f, t_iter *i, va_list args)
 	int					num;
 
 	num = va_arg(args, int);
-	if (f.zero && f.width && f.prec == -1)
+	if (f.zero && f.width && f.prec <= -1)
 	{
 		f.prec = (num < 0 ? f.width - 1 : f.width);
 		f.width = 0;

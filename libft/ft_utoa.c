@@ -6,36 +6,42 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/20 20:35:30 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/20 20:36:10 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/23 17:58:57 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_utoa(unsigned int n)
+static int	get_size(unsigned long long n)
 {
-	char			*p;
-	int				size;
-	unsigned int	x;
+	int size;
 
-	x = n;
 	size = 0;
-	while (x > 10)
+	if (n == 0)
+		return (1);
+	while (n > 0)
 	{
-		x /= 10;
+		n = n / 10;
 		size++;
 	}
-	p = (char *)malloc(sizeof(p) * (size + 1));
-	if (p)
+	return (size);
+}
+
+char		*ft_utoa(unsigned long long n)
+{
+	int					size;
+	char				*nbr;
+
+	size = 0;
+	size += get_size(n);
+	if (!(nbr = ft_calloc(1, sizeof(char) * (size + 1))))
+		return (NULL);
+	size--;
+	while (size >= 0)
 	{
-		p[size + 1] = '\0';
-		while (size >= 0)
-		{
-			x = n % 10;
-			p[size] = 48 + x;
-			n = n / 10;
-			size--;
-		}
+		nbr[size] = (n % 10) + 48;
+		size--;
+		n = n / 10;
 	}
-	return (p);
+	return (nbr);
 }

@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/22 17:37:47 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/23 18:33:58 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,8 +140,12 @@ int				main(void)
 //	printf("|%10.p|\n", NULL);
 //	printf("|%-10.p|\n", NULL);
 //	printf("|%.p|\n", NULL);
-	ft_printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
-	printf("ultimate4 %*.*x %*.*X\n", 1, 50, 5000, 1, 0, 10);
+//	ft_printf("|%6u|\n", 100u);
+//	printf("|%6u|\n", 100u);
+	ft_printf("neg9 %*.*d\n", 156, 150, -3000);
+	printf("neg9 %*.*d\n", 156, 150, -3000);
+
+
 /*
 	-> cacharle pft <-
 	%u reste a fix, un '0' de trop est print, c'est donc une valeur simple a tweak
