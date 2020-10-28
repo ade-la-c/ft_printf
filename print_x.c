@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 15:03:21 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/19 18:16:45 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/28 18:57:20 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ static void					printhex(t_flag f, unsigned long num, t_iter *i)
 
 void						ft_print_x(t_flag f, t_iter *i, va_list args)
 {
-	unsigned long			num;
+	unsigned int			num;
 	char					*base;
 	int						prt;
 
-	num = va_arg(args, unsigned long);
+	num = va_arg(args, unsigned int);
 	base = (f.definer == 'X' ? "0123456789ABCDEF" : "0123456789abcdef");
 	if (f.zero && f.width && f.prec == -1)
 	{

@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/23 18:33:58 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/10/28 19:16:45 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,17 +142,33 @@ int				main(void)
 //	printf("|%.p|\n", NULL);
 //	ft_printf("|%6u|\n", 100u);
 //	printf("|%6u|\n", 100u);
-	ft_printf("neg9 %*.*d\n", 156, 150, -3000);
-	printf("neg9 %*.*d\n", 156, 150, -3000);
 
+//	printf(" ~~%d~~\n", ft_printf("neg9 %*.*d\n", 200, 155, -3000));
+//	printf(" ~~%d~~\n", printf("neg9 %*.*d\n", 200, 155, -3000));
+	
+	ft_printf("%-p\n", NULL);
+	printf("%-p\n", NULL);
 
+//	printf("~~%d~~\n", ft_printf("ultimate2 %*i %*u ", 10000, -55, 1, -60));
+//	printf("~~%d~~\n", printf("ultimate2 %*i %*u ", 10000, -55, 1, -60));
+/*
+	ft_printf("%-49.148X\n", 1788014179u);
+	printf("%-49.148X\n", 1788014179u);
+	ft_printf("%-144c\n", -42);
+	printf("%-144c\n", -42);
+	ft_printf("%---47.*x\n", -140, 1771987060u);
+	printf("%---47.*x\n", -140, 1771987060u);
+	ft_printf("%-140.*X\n", -145, 3144147879u);
+	printf("%-140.*X\n", -145, 3144147879u);
+	ft_printf("%-115.118s\n", "H\vYsk&|8>-[gth=Kx5_0Qr`*<Q+");
+	printf("%-115.118s\n", "H\vYsk&|8>-[gth=Kx5_0Qr`*<Q+");
+*/
 /*
 	-> cacharle pft <-
 	%u reste a fix, un '0' de trop est print, c'est donc une valeur simple a tweak
 	reste a savoir la quelle et sous quelles conditions
 */
 	//system("leaks a.out");
-
 /*
 	t_flag	f;
 	int		nbr = 0;
