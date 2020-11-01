@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/08 19:00:41 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/23 18:24:50 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/11/01 16:48:33 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void					ft_print_u(t_flag f, t_iter *i, va_list args)
 	unsigned int		num;
 
 	num = va_arg(args, unsigned int);
-	if (f.zero && f.width && f.prec == -1)
+	if (f.zero && f.width && f.prec <= -1)
 	{
 		f.prec = f.width;
 		f.width = 0;

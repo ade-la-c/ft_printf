@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 19:57:38 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/28 19:16:45 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/11/01 16:39:13 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,8 +146,8 @@ int				main(void)
 //	printf(" ~~%d~~\n", ft_printf("neg9 %*.*d\n", 200, 155, -3000));
 //	printf(" ~~%d~~\n", printf("neg9 %*.*d\n", 200, 155, -3000));
 	
-	ft_printf("%-p\n", NULL);
-	printf("%-p\n", NULL);
+	ft_printf("%05.*x\n", -8, 500);
+	printf("%05.*x\n", -8, 500);
 
 //	printf("~~%d~~\n", ft_printf("ultimate2 %*i %*u ", 10000, -55, 1, -60));
 //	printf("~~%d~~\n", printf("ultimate2 %*i %*u ", 10000, -55, 1, -60));

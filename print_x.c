@@ -6,7 +6,7 @@
 /*   By: ade-la-c <ade-la-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 15:03:21 by ade-la-c          #+#    #+#             */
-/*   Updated: 2020/10/28 18:57:20 by ade-la-c         ###   ########.fr       */
+/*   Updated: 2020/11/01 16:48:29 by ade-la-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void						ft_print_x(t_flag f, t_iter *i, va_list args)
 
 	num = va_arg(args, unsigned int);
 	base = (f.definer == 'X' ? "0123456789ABCDEF" : "0123456789abcdef");
-	if (f.zero && f.width && f.prec == -1)
+	if (f.zero && f.width && f.prec <= -1)
 	{
 		f.prec = f.width;
 		f.width = 0;
